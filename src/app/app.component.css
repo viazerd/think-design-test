@@ -1,0 +1,94 @@
+.bg-div {
+  background: url("../assets/img/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+.card-header {
+  background: #8B3A40;
+  color: #ffffff;
+}
+
+.row {
+  margin: 0 auto;
+}
+
+.card {
+  /* padding: 0px !important; */
+  border-radius: 4px !important;
+  height: 450px !important;
+  background: rgba(40, 40, 40,0.8);
+  min-width: 33vw !important;
+  width: 40vw !important
+}
+
+.form {
+  min-width: 150px;
+  /* max-width: 500px; */
+  width: 100%;
+  padding: 15px !important;
+}
+
+.take-width {
+  width: 100%;
+}
+
+textarea::-webkit-scrollbar {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input,
+textarea {
+  color: white;
+}
+
+.card-footer {
+  padding: 0px !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-top: 0px solid rgba(0, 0, 0, .125) !important;
+}
+
+button {
+  width: 150px;
+  height: 30px;
+  color: #ffffff;
+}
+
+.send {
+  background: #8B3A40;
+}
+
+.reset {
+  background: #0F7792;
+}
+
+.no-padd {
+  padding: 0px !important;
+}
+
+h5 {
+  font-weight: 100;
+}
+
+button:disabled {
+  color: #424242;
+  background: #cecece;
+}
+
+.email-loader {
+  position: relative;
+  height: 80px;
+}
+
+.ngx-overlay.ngx-position-absolute.loading-foreground {
+  background: inherit !important;
+}
+
+.email-gif {
+  height: 102px;
+  padding: 0 9px 9px;
+}

@@ -1,0 +1,56 @@
+<div class="bg-div">
+  <div class="container">
+    <div class="row ">
+      <div class="col-3"></div>
+      <div class="col-6 mt-5">
+        <div class="card" style="width: 18rem;">
+          <div class="text-center card-header">
+            <h5>Send New Email</h5>
+          </div>
+          <div class="card-body text-center px-4">
+            <form [formGroup] ='emailForm' class="form text-center">
+              <mat-form-field class="take-width">
+                <mat-label>To:</mat-label>
+                <input matInput formControlName="email" name="email" placeholder="example@mail.com">
+              </mat-form-field>
+              <mat-form-field class="take-width">
+                <mat-label>Subject:</mat-label>
+                <input matInput formControlName='subject' name="subject">
+              </mat-form-field>
+              <mat-form-field class="take-width">
+                <mat-label>Message:</mat-label>
+                <textarea matInput formControlName='message' name='message' cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                  cdkAutosizeMaxRows="5"></textarea>
+              </mat-form-field>
+              <br>
+
+
+              <div class="container email-loader" *ngIf='showLoader'>
+                <ngx-ui-loader [loaderId]="'loader-01'" blur=8 fgsType='ball-spin' [hasProgressBar]=false fgsSize=40 logoSize=10 ></ngx-ui-loader>
+                <img *ngIf="showGif" class="email-gif" src="../assets/img/email-sent.gif" alt="" srcset="">
+                <img *ngIf="showEnd" class="email-gif" src="../assets/img/end-img.gif" alt="" srcset="">
+              </div>
+              <br>
+
+
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-6 text-left no-padd">
+                    <button mat-raised-button class="send" (click)="submitForm()" [disabled]='!emailForm.valid'>Send  <i class="fa fa-paper-plane" aria-hidden="true"></i> </button>
+                  </div>
+                  <div class="col-6 text-right no-padd">
+                    <button mat-raised-button class="reset" (click)="resetForm()">Reset <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+
+</div>
